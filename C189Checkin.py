@@ -51,7 +51,7 @@ def main():
             else:
                 print(response.text)
         except:
-                print(response.status_code + response.text)
+                print(str(response.status_code) + response.text)
     #第二次抽奖
     response = s.get(url2,headers=headers)
     if ("prizeName" in response.text):
@@ -66,7 +66,7 @@ def main():
             else:
                 print(response.text)
         except:
-                print(response.status_code + response.text)
+                print(str(response.status_code) + response.text)
 
 BI_RM = list("0123456789abcdefghijklmnopqrstuvwxyz")
 def int2char(a):
